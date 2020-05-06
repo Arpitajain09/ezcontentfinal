@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -191,4 +192,22 @@ public static void switchFrameByWebElement(WebElement frameElement)
 
 	}
 
+	public Boolean checkList(List<WebElement> actual, List<String> exp) {
+		Boolean result = false;
+		if (actual.size() != exp.size()) {
+			return result;
+		}
+		for (WebElement actualEle : actual) {
+			for (String expectedEle : exp
+			) {
+				if (!actualEle.getText().equalsIgnoreCase(expectedEle)) {
+					result = false;
+					break;
+				} else {
+					result = true;
+				}
+			}
+		}
+		return result;
+	}
 }
