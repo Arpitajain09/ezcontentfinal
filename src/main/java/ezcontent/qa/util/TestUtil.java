@@ -40,7 +40,7 @@ static String currentDirec= System.getProperty("user.dir");
 	public static Actions action;
 
 	//Navigate to any url
-	public static void navigateToURL(String url) 
+	public static void navigateToURL(String url)
 	{
 		driver.navigate().to(url);
 
@@ -109,9 +109,16 @@ public static void switchFrameByWebElement(WebElement frameElement)
 
 
      }
+
+
+     public static String timeStampByDate() {
+    	 return new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+
+
+     }
      
      //To capture screenshot
-     public static void captureScreenshot() {
+     public static String captureScreenshot() {
     	 
     	 File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
     	 String fileWithPath = currentDirec+File.separator+"test-output"+File.separator+timeStamp()+".png"; 
@@ -122,8 +129,8 @@ public static void switchFrameByWebElement(WebElement frameElement)
 			
 			e.printStackTrace();
 		}
-    	 
-    	 
+
+		 return fileWithPath;
     	 
      }
      

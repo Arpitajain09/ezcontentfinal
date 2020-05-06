@@ -82,7 +82,7 @@ public class ArticleMapPage extends TestBase {
   @FindBy(xpath="//span[@class='field field--name-title field--type-string field--label-hidden quickedit-field']")
   WebElement articleCreated;
 
-  public ArticleMapPage() throws IOException {
+  public ArticleMapPage() {
   	PageFactory.initElements(driver, this); 
   }
   public String contentHeading() {

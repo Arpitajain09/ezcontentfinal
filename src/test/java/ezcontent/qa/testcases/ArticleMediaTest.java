@@ -17,9 +17,9 @@ public class ArticleMediaTest extends TestBase {
 	LoginPage loginpage;
 	ArticleMediaPage article;
 
-	ArticleMediaTest() {
+	/*ArticleMediaTest() {
 		super(); // to call the super class(BaseClass) constructor to get prop value
-	}
+	}*/
 
 	@BeforeClass
 	public void setup() {

@@ -13,8 +13,6 @@ import ezcontent.qa.pages.ArticleEmbedPage;
 import ezcontent.qa.pages.LoginPage;
 
 
-public class ArticleEmbedPageTest {
-
 	public class ArticleEmbedTest extends TestBase {
 		ArticleEmbedPage embed;
 		LoginPage page;
@@ -145,4 +143,4 @@ public class ArticleEmbedPageTest {
 		}
 	}
 
-}
+
